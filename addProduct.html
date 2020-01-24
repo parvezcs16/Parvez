@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		fieldset {
+			margin:20px;
+  			width: 20%;
+  			display: none;
+		}
+
+		form{
+			margin: 20px;
+		}
+
+		.button{
+			width: 150px;
+			margin-left: 20px;
+			display: block;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+		var adduser = false;
+		var addproduct = false;
+		var addGetShipment = false;
+		var addmakepayment = false;
+		var addshipment = false;
+		var addcheckbalance = false;
+		var addgetproduct = false;
+		var addgetuser = false;
+		var field;
+
+		function showAddUserForm(){
+
+			field = document.getElementById('addUserField');
+					
+				document.getElementById('addUserField').setAttribute("style", "display:none");
+				document.getElementById('addProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetShipment').setAttribute("style", "display:none");
+				document.getElementById('addMakePayment').setAttribute("style", "display:none");
+				document.getElementById('addSendShipment').setAttribute("style", "display:none");
+				document.getElementById('addCheckBalance').setAttribute("style", "display:none");
+				document.getElementById('addGetProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetUser').setAttribute("style", "display:none");
+			
+			if(adduser){
+				field.setAttribute("style", "display:none");
+				adduser = false;
+			}else{
+				field.setAttribute("style", "display:block");
+				adduser = true;
+			}
+
+			return true;
+
+		}
+
+
+		function showAddProductForm(){
+
+			field = document.getElementById('addProduct');
+			
+			document.getElementById('addUserField').setAttribute("style", "display:none");
+			document.getElementById('addProduct').setAttribute("style", "display:none");
+			document.getElementById('addGetShipment').setAttribute("style", "display:none");
+			document.getElementById('addMakePayment').setAttribute("style", "display:none");
+			document.getElementById('addSendShipment').setAttribute("style", "display:none");
+			document.getElementById('addCheckBalance').setAttribute("style", "display:none");
+			document.getElementById('addGetProduct').setAttribute("style", "display:none");
+			document.getElementById('addGetUser').setAttribute("style", "display:none");
+
+			if(addproduct){
+				field.setAttribute("style", "display:none");
+				addproduct = false;
+			}else{
+				field.setAttribute("style", "display:block");
+				addproduct = true;
+			}
+
+		}
+
+		function showGetShipmentForm(){
+
+			field = document.getElementById('addGetShipment');
+
+			document.getElementById('addUserField').setAttribute("style", "display:none");
+			document.getElementById('addProduct').setAttribute("style", "display:none");
+			document.getElementById('addGetShipment').setAttribute("style", "display:none");
+			document.getElementById('addMakePayment').setAttribute("style", "display:none");
+			document.getElementById('addSendShipment').setAttribute("style", "display:none");
+			document.getElementById('addCheckBalance').setAttribute("style", "display:none");
+			document.getElementById('addGetProduct').setAttribute("style", "display:none");
+			document.getElementById('addGetUser').setAttribute("style", "display:none");
+			
+			if(addGetShipment){
+				field.setAttribute("style", "display:none");
+				addGetShipment = false;
+			}else{
+				field.setAttribute("style", "display:block");
+				addGetShipment = true;
+			}
+
+		}
+
+		function showMakePaymentForm(){
+
+			field = document.getElementById('addMakePayment');
+
+			document.getElementById('addUserField').setAttribute("style", "display:none");
+				document.getElementById('addProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetShipment').setAttribute("style", "display:none");
+				document.getElementById('addMakePayment').setAttribute("style", "display:none");
+				document.getElementById('addSendShipment').setAttribute("style", "display:none");
+				document.getElementById('addCheckBalance').setAttribute("style", "display:none");
+				document.getElementById('addGetProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetUser').setAttribute("style", "display:none");
+			
+			if(addmakepayment){
+				field.setAttribute("style", "display:none");
+				addmakepayment = false;
+			}else{
+				field.setAttribute("style", "display:block");
+				addmakepayment = true;
+			}
+
+		}
+
+		function showSendShipmentForm(){
+
+			field = document.getElementById('addSendShipment');
+
+			document.getElementById('addUserField').setAttribute("style", "display:none");
+				document.getElementById('addProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetShipment').setAttribute("style", "display:none");
+				document.getElementById('addMakePayment').setAttribute("style", "display:none");
+				document.getElementById('addSendShipment').setAttribute("style", "display:none");
+				document.getElementById('addCheckBalance').setAttribute("style", "display:none");
+				document.getElementById('addGetProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetUser').setAttribute("style", "display:none");
+			
+			if(addshipment){
+				field.setAttribute("style", "display:none");
+				addshipment = false;
+			}else{
+				field.setAttribute("style", "display:block");
+				addshipment = true;
+			}
+
+		}
+
+		function showCheckBalanceForm(){
+
+			field = document.getElementById('addCheckBalance');
+
+			document.getElementById('addUserField').setAttribute("style", "display:none");
+				document.getElementById('addProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetShipment').setAttribute("style", "display:none");
+				document.getElementById('addMakePayment').setAttribute("style", "display:none");
+				document.getElementById('addSendShipment').setAttribute("style", "display:none");
+				document.getElementById('addCheckBalance').setAttribute("style", "display:none");
+				document.getElementById('addGetProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetUser').setAttribute("style", "display:none");
+			
+			if(addcheckbalance){
+				field.setAttribute("style", "display:none");
+				addcheckbalance = false;
+			}else{
+				field.setAttribute("style", "display:block");
+				addcheckbalance = true;
+			}
+
+		}
+
+		function showGetProductForm(){
+
+			field = document.getElementById('addGetProduct');
+
+			document.getElementById('addUserField').setAttribute("style", "display:none");
+				document.getElementById('addProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetShipment').setAttribute("style", "display:none");
+				document.getElementById('addMakePayment').setAttribute("style", "display:none");
+				document.getElementById('addSendShipment').setAttribute("style", "display:none");
+				document.getElementById('addCheckBalance').setAttribute("style", "display:none");
+				document.getElementById('addGetProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetUser').setAttribute("style", "display:none");
+			
+			if(addgetproduct){
+				field.setAttribute("style", "display:none");
+				addgetproduct = false;
+			}else{
+				field.setAttribute("style", "display:block");
+				addgetproduct = true;
+			}
+
+		}
+
+		function showGetUserForm(){
+
+			field = document.getElementById('addGetUser');
+
+			document.getElementById('addUserField').setAttribute("style", "display:none");
+				document.getElementById('addProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetShipment').setAttribute("style", "display:none");
+				document.getElementById('addMakePayment').setAttribute("style", "display:none");
+				document.getElementById('addSendShipment').setAttribute("style", "display:none");
+				document.getElementById('addCheckBalance').setAttribute("style", "display:none");
+				document.getElementById('addGetProduct').setAttribute("style", "display:none");
+				document.getElementById('addGetUser').setAttribute("style", "display:none");
+			
+			if(addgetuser){
+				field.setAttribute("style", "display:none");
+				addgetuser = false;
+			}else{
+				field.setAttribute("style", "display:block");
+				addgetuser = true;
+			}
+
+		}
+
+
+	</script>
+
+</head>
+<body>
+
+	<div style="width: 100%; background-color: pink;">
+		<img src="block.jpg" width="200px" height="200px" />
+	</div>
+
+	<form>
+
+		<input type="button" class="button" name="adduser" id="addUserForm" value="Add User" onclick="showAddUserForm()" /><br />
+
+		<fieldset id="addUserField">
+			<legend>Add User</legend>
+				<p>Address</p>
+				<input type="text" name="address"  id="address" placeholder="Address" />
+
+				<p>Company Name</p>
+				<input type="text" name="companyName"  id="companyName" placeholder="Company Name" />
+
+				<p>Role</p>
+				<input type="text" name="role"  id="role" placeholder="Role" />
+
+				<p>Country</p>
+				<input type="text" name="country"  id="country" placeholder="Country" />
+
+				<p>City</p>
+				<input type="text" name="city"  id="city" placeholder="City" />
+
+				<p>Phone Number</p>
+				<input type="number" name="phoneNumber"  id="phoneNumber" placeholder="Phone Number" />
+
+				<p>Physical Address</p>
+				<input type="text" name="physicalAddress"  id="physicalAddress" placeholder="Physical Address" />
+
+				<input type="button" name="addUser" id="addUser" value="Add User" />	
+		</fieldset>	
+
+		<input type="button" class="button" name="adduser" name="addProductForm" id="addProductForm" value="Add Product" onclick="showAddProductForm()" /><br />
+	
+		<fieldset id="addProduct">
+			<legend>Add Product</legend>
+				<p>Address</p>
+				<input type="text" name="address"  id="address" placeholder="Address" />
+
+				<p>Name</p>
+				<input type="text" name="name"  id="name" placeholder="Name" />
+
+				<p>Quantity</p>
+				<input type="text" name="quantity"  id="quantity" placeholder="Quantity" />
+
+				<p>Description</p>
+				<input type="text" name="description"  id="description" placeholder="Description" />
+
+				<input type="button" name="addProduct" id="addProduct" value="Add Product" />	
+		</fieldset>	
+	
+		<input type="button" class="button" name="adduser" name="addGetShipmentForm" id="addGetShipmentForm" value="Get Shipment" onclick="showGetShipmentForm()" /><br />
+
+		<fieldset id="addGetShipment">
+			<legend>Get Shipment</legend>
+				<p>Location</p>
+				<input type="text" name="location"  id="location" placeholder="Location" />
+
+				<p>Quantity</p>
+				<input type="number" name="quantity"  id="quantity" placeholder="Quantity" />
+
+				<p>Asset</p>
+				<input type="text" name="asset"  id="asset" placeholder="Asset" />
+
+				<p>Tracking No#</p>
+				<input type="text" name="trackingNo"  id="trackingNo" placeholder="Tracking No#" />
+
+				<input type="button" name="getShipment" id="getShipment" value="Get Shipment" />	
+		</fieldset>	
+
+		<input type="button" class="button" name="adduser" name="addMakePaymentForm" id="addMakePaymentForm" value="Make Payment" onclick="showMakePaymentForm()" /><br />
+	
+		<fieldset id="addMakePayment">
+			<legend>Make payment</legend>
+				<p>From</p>
+				<input type="text" name="from"  id="from" placeholder="From" />
+
+				<p>To</p>
+				<input type="number" name="To"  id="To" placeholder="To" />
+
+				<p>Amount</p>
+				<input type="number" name="asset"  id="asset" placeholder="Asset" />
+
+				<input type="button" name="makePayment" id="makePayment" value="Make Payment" />	
+		</fieldset>	
+
+		<input type="button" class="button" name="adduser" name="addSendShipmentForm" id="addSendShipmentForm" value="Send Shipment" onclick="showSendShipmentForm()" /><br />
+	
+		<fieldset id="addSendShipment">
+			<legend>Send Shipment</legend>
+
+				<p>Asset</p>
+				<input type="text" name="asset"  id="asset" placeholder="Asset" />
+
+				<p>Tracking No#</p>
+				<input type="text" name="trackingNo"  id="trackingNo" placeholder="Tracking No#" />
+
+				<p>Destination</p>
+				<input type="text" name="destination"  id="destination" placeholder="Destination" />
+
+				<p>Quantity</p>
+				<input type="number" name="quantity"  id="quantity" placeholder="Quantity" />
+
+				<p>Sender</p>
+				<input type="text" name="sender"  id="sender" placeholder="Address" />
+
+				<p>Reciever</p>
+				<input type="text" name="receiver"  id="receiver" placeholder="Address" />
+
+
+				<input type="button" name="getShipment" id="getShipment" value="Get Shipment" />	
+		</fieldset>	
+
+		<input type="button" class="button" name="adduser" name="addCheckBalanceForm" id="addCheckBalanceForm" value="Check Balance" onclick="showCheckBalanceForm()" /><br />
+
+		<fieldset id="addCheckBalance">
+			<legend>Check Balance</legend>
+
+				<p>Account Holder</p>
+				<input type="text" name="holderAddress"  id="holderAddress" placeholder="Address" />
+
+				<input type="button" name="getShipment" id="getShipment" value="Call" />	
+		</fieldset>	
+
+		<input type="button" class="button" name="adduser" name="addGetProductForm" id="addGetProductForm" value="Get Product" onclick="showGetProductForm()" /><br />
+	
+	
+		<fieldset id="addGetProduct">
+			<legend>Get Product</legend>
+
+				<p>Tag</p>
+				<input type="text" name="tag"  id="tag" placeholder="Tag" />
+
+				<input type="button" name="call" id="getShipment" value="Get Product" />	
+		</fieldset>	
+
+		<input type="button" class="button" name="adduser" name="addGetUserForm" id="addGetUserForm" value="Get User" onclick="showGetUserForm()" /><br />
+	
+		<fieldset id="addGetUser">
+			<legend>Get User</legend>
+
+				<p>Get User</p>
+				<input type="text" name="getUser"  id="getUser" placeholder="Address" />
+
+				<input type="button" name="getShipment" id="getShipment" value="Get User" />	
+		</fieldset>	
+	</form>
+
+</body>
+</html>	
